@@ -15,7 +15,7 @@ variable "az" {
 
 variable "key_name" {
   type = string
-  default = "vnc"
+  default = "vnc_laptop"
 }
 
 variable "vol_size" {

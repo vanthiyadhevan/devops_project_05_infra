@@ -19,7 +19,7 @@ resource "aws_instance" "jenkins_server" {
     volume_size = var.vol_size
     volume_type = var.vol_type
   }
-  vpc_security_group_ids = [path.module.sg.aws_security_group.jenkins-SG.id]
+  vpc_security_group_ids = [path.module.sg.aws_security_group.jenkins_SG.id]
   subnet_id = path.module.vpc.aws_subnet.ci_pub_sub.id
 
   user_data = filebase64("jenkins_automation.sh")

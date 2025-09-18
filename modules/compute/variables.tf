@@ -1,29 +1,45 @@
 variable "ami_name" {
-  type = string
+  type    = string
   default = "ami-0360c520857e3138f"
 }
 
+variable "instance_name" {
+  type    = list(string)
+  default = ["Jenkins-Server", "Docker-Server"]
+}
 variable "instance_type" {
-  type = list(string)
+  type    = list(string)
   default = ["t3.small", "t3.micro"]
 }
 
 variable "az" {
-  type = string
+  type    = string
   default = "us-east-1a"
 }
 
 variable "key_name" {
-  type = string
-  default = "vnc_laptop"
+  sensitive = true
+  type      = string
+  default   = "vnc_laptop"
 }
 
 variable "vol_size" {
-  type = number
+  type    = number
   default = 20
 }
 
 variable "vol_type" {
-  type = string
+  type    = string
   default = "gp3"
+}
+
+# -----------------------------
+# Testing VPC 
+# -----------------------------
+
+variable "subnet_id" {
+
+}
+variable "sg_ids" {
+
 }

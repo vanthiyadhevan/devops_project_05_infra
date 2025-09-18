@@ -1,12 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "6.13.0"
-    }
-  }
-}
-
 resource "aws_vpc" "ci_vpc" {
   cidr_block           = var.vpc_cidr
   enable_dns_hostnames = true

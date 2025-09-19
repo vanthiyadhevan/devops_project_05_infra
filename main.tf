@@ -12,7 +12,7 @@ module "security_group" {
 
 module "servers" {
   source    = "./modules/compute"
-  vpc_id    = module.vpc.vpc_id
+  # vpc_id    = module.vpc.vpc_id
   subnet_id = module.vpc.subnet_id
   sg_ids    = module.security_group.sg_ids
 
